@@ -38,7 +38,7 @@ allure open AllureReports/report
 В проекте используется файл `chrome.dll`, который необходим для выполнения тестов. Поскольку он слишком велик для загрузки на GitHub, выполните следующие шаги для его добавления:
 ### Шаги для загрузки и установки chrome.dll:
 1. Скачать Chrome https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.91/win64/chrome-win64.zip.
-2. Скачать Driver https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.91/mac-x64/chromedriver-mac-x64.zip
+2. Скачать Driver https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.91/win64/chromedriver-win64.zip
 3. Страница загрузки https://googlechromelabs.github.io/chrome-for-testing/#stable
 4. Найдите и скачайте версию Chrome `Version: 130.0.6723.91 (r1356013)` и совместимый драйвер, соответствующую нужной вам операционной системе.
 5. После скачивания извлеките файл `chrome.dll` и переместите его в директорию проекта `Browsers/chrome-win64/` в папке проекта или замените полностью файлы на новые
