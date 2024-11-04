@@ -3,8 +3,8 @@ import os
 LOGIN_URL_TEST_VANILLA = "https://test-vanilla.promo.astradisk.ru/"
 LOGIN_URL_TEST_ASTRADISK = "https://test-disk.promo.astradisk.ru/"
 
-EMAIL = "abuldakov"
-PASSWORD = "yaehaphuve5ang0Aik2ci9"
+EMAIL = ""
+PASSWORD = ""
 
 # Переход на уровень выше, чтобы получить корневую директорию проекта
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
