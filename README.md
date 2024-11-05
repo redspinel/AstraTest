@@ -34,6 +34,25 @@ pip install -r requirements.txt
 2. На момент запуска теста test_modal_window_confirmation_files не должно быть создано директорий (только файлы), так как текущий функционал не реализован.
 Настройка Allure: Для получения отчёта требуется установленный Allure. Установите его, следуя инструкции ниже.
 
+### Шаги установки проекта на Ubuntu
+cd ~/your_directory  # Заменить `your_directory` на нужную папку
+git clone https://github.com/redspinel/AstraTest.git
+cd AstraTest
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+nano Utils/config.py # Вписать login и pass > Сохранить
+скачать 'chrome' файл или весь архив (https://storage.googleapis.com/chrome-for-testing-public/130.0.6723.91/linux64/chrome-linux64.zip) и переместить в Browsers>chrome-linux64
+wget https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.tgz
+tar -zxvf allure-2.32.0.tgz
+sudo mv ~/Downloads/allure-2.32.0 /opt/allure
+sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+sudo apt update
+sudo apt install -y openjdk-11-jre
+java -version
+allure --version
+запуск тестов: pytest
+
 
 ### Настройка Chrome и ChromeDriver
 Страница загрузки https://googlechromelabs.github.io/chrome-for-testing/#stable
@@ -72,7 +91,7 @@ pip install -r requirements.txt
     sudo mv allure-2.20.1 /opt/allure
     sudo ln -s /opt/allure/bin/allure /usr/bin/allure
     - Запуск тестов
-    python3 run.py
+    pytest
     - Генерация и просмотр отчетов Allure
     allure generate AllureReports -o AllureReports/report --clean
     allure open AllureReports/report
@@ -80,7 +99,7 @@ pip install -r requirements.txt
 
 ### Установка Allure для генерации отчетов на Windows
 1. **Скачайте последнюю версию Allure**:
-   - Перейдите на [страницу релизов Allure](https://github.com/allure-framework/allure2/releases) и скачайте ZIP-архив последней версии для Windows. В проекте используется `allure-2.30.0.zip`.
+   - Перейдите на [страницу релизов Allure](https://github.com/allure-framework/allure2/releases) и скачайте ZIP-архив последней версии для Windows. В проекте используется `allure-2.32.0.zip`.
 
 2. **Распакуйте архив**:
    - Извлеките содержимое архива (например, в `C:\allure`).
@@ -116,4 +135,10 @@ pip install -r requirements.txt
      ```
 
 Теперь Allure установлен и готов к использованию на Windows.
+
+
+
+
+
+
 
