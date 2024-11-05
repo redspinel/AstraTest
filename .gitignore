@@ -3,3 +3,4 @@ __pycache__/
 Screenshots/
 AllureReports/
 *.pyc
+* text=auto

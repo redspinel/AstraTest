@@ -1,1 +1,9 @@
+# Настройка LFS для chrome.dll
 Browsers/chrome-win64/chrome.dll filter=lfs diff=lfs merge=lfs -text
+
+# Применение CRLF для всех текстовых файлов по умолчанию
+* text=auto
+
+# Оставляем LF для файлов внутри папок Browsers и Drivers
+Browsers/* text eol=lf
+Drivers/* text eol=lf
